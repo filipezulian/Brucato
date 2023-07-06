@@ -215,7 +215,8 @@ footer {
 .btn-dark:focus,
 .btn-dark.focus {
     color: #fff;
-    background-color: #23272b;
+    background-color: rgb(61, 87, 141);
+    ;
     border-color: #1d2124;
     box-shadow: 0 0 0 0.2rem rgba(52, 58, 64, 0.5);
 }
@@ -334,6 +335,79 @@ footer {
     border-radius: 20px;
 }
 
+.form_addProdutos_func {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: left;
+    width: 100%;
+    background-color: #fafafa;
+    padding: 0 5%;
+    height: 45rem;
+    box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+}
+
+.btn_addProd_func {
+    margin: 1em 0;
+    color: #fff;
+    background-color: rgb(91, 133, 217);
+    border-color: rgb(91, 133, 217);
+    width: 100%;
+    height: 3em;
+    border-radius: 20px;
+}
+
+.btn_addProd_func:hover {
+    margin: 1em 0;
+    color: #fff;
+    background-color: rgb(61, 87, 141);
+    border-color: rgb(61, 87, 141);
+    width: 100%;
+    height: 3em;
+    border-radius: 20px;
+}
+
+.form_editarProdutos_func {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: left;
+    width: 100%;
+    background-color: #fafafa;
+    padding: 0 5%;
+    height: 46rem;
+    box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+}
+
+.btn_editarProd_func {
+    display: block;
+    background: rgb(136, 192, 16);
+    border: none;
+    border-radius: 10px;
+    width: 110px;
+    height: 55px;
+    font-size: 1em;
+    text-transform: uppercase;
+    font-weight: bold;
+    align-content: center;
+    margin: 1em 0 1em 33em;
+}
+
+.btn_deletarProd_func {
+    background: rgb(248, 89, 89);
+    border: none;
+    border-radius: 10px;
+    width: 110px;
+    height: 55px;
+    font-size: 1em;
+    text-transform: uppercase;
+    font-weight: bold;
+    align-self: center;
+    margin: 0 0 1em 33em;
+}
+
 .form_left {
     display: flex;
     flex-direction: column;
@@ -361,7 +435,7 @@ footer {
     justify-content: center;
 }
 
-.main_btn_usuario_editar_cupom{
+.main_btn_usuario_editar_cupom {
     display: flex;
     margin: 2em 3em;
     height: 5em;
@@ -448,7 +522,7 @@ footer {
 
 .container_editar_cupom {
     margin: 1em 13em;
-    padding: 1em 3em ;
+    padding: 1em 3em;
     width: 80vw;
     height: 32.5em;
     box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.25);

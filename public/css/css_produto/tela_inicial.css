@@ -267,10 +267,15 @@ body {
     background-color: #fafafa;
 }
 
+.coluna_display_line_top{
+    width: 14em;
+    justify-content: center;
+}
+
 .display_line_info_pedidos {
-    margin-top: 2.5px;
-    position: relative;
-    width: 65em;
+    position: absolute;
+    margin: 1%;
+    width: 98%;
     height: 3em;
     border-radius: 20px;
     display: flex;
@@ -544,11 +549,15 @@ body {
     border-radius: 10px;
 }
 
+.main_btn_formasPag_editar{
+    width: 12em;
+}
+
 .main_btn_formasPag_editar button {
     display: inline;
     background: rgb(137, 207, 125);
     padding: 0.2em 0.8em;
-    border: none;
+    border: none;    
     text-transform: uppercase;
     font-weight: bold;
     border-radius: 20px;
@@ -558,7 +567,9 @@ body {
     display: inline;
     position: relative;
     background: rgb(207, 125, 125);
+    margin: 1.4em 0 0 51em;
     padding: 0.2em 0.8em;
+    font-size: 1.3em;
     border: none;
     text-transform: uppercase;
     font-weight: bold;

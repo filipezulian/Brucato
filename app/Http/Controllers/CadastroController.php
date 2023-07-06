@@ -64,7 +64,6 @@ public function update(Request $request, $id){
     $user->cpf = $request->input("cpf");
 
     $user->save();
-
     
 }
 

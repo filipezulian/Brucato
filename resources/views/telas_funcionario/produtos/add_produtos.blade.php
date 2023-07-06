@@ -17,11 +17,12 @@
                 margin-bottom: 70px; 
             }
         </style>
-        <div class="form">
+        <div class="form_addProdutos_func">
         <div class="scroll-view">  
             <form method="POST" action="{{route('produto.store')}}" enctype="multipart/form-data" >
                
             @csrf
+            <button type="submit" class="btn_addProd_func">Adicionar</button>
                 <div class="">
                     <label for="nome" class="" style="font-weight: 750;">Nome:</label>
                     <input type="text" id="nome" class="form-control formText seperate" placeholder="Maximo de 50 Caracteres" name="nome" required>
@@ -75,13 +76,6 @@
                     </script>
                 
                 </div>
-
-
-
-                <button type="submit" class="btn_adicionar">Adicionar</button>
-                
-            
-            
             </form>
         </div>
     </div>

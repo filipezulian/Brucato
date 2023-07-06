@@ -19,14 +19,17 @@
         <h1 style="color: #5c5c5c; text-align: center; padding:0.35em;height: 2em; background-color: #d9d9d9; padding-top: 0.7em">Formas de Pagamento</h1>
         <div class="main_pedido">
             <div class="display_line_info">
-                <div class="coluna_display_line">
+                <div class="coluna_display_line_top">
                     <p class="text_display_line">Número do Cartão</p>
                 </div>
-                <div class="coluna_display_line">
+                <div class="coluna_display_line_top">
                     <p class="text_display_line">Tipo</p>
                 </div>
-                <div class="coluna_display_line">
+                <div class="coluna_display_line_top">
                     <p class="text_display_line">Data Vencimento</p>
+                </div>
+                <div class="coluna_display_line_top">
+                    <p class="text_display_line">_Opções_</p>
                 </div>
             </div>
             <div class="display_generico_line">

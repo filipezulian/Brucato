@@ -24,7 +24,7 @@
                         @method('PUT')
                         <label for="">Endereço:</label>
                         <div class="inputs_main_usuario">
-                            <input type="text" value="_pegar_endereco_" name="name">
+                            <input type="text" value="{{endereco_usuario->endereco}}" name="name">
                         </div>
                         <label for="">Complemento:</label>
                         <div class="inputs_main_usuario" >
