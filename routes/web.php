@@ -57,7 +57,8 @@ Route::controller(HomeController::class)->group(function () {
     Route::put('/usuario', 'update')->name('home.update.usuario');
     Route::delete('/usuario/delete/{user}', 'delete')->name('usuario.delete');
     Route::get('/carrinho', 'carrinho')->name('home.carrinho');
-    Route::post('/carrinho/aplicar','aplicarCupom')->name('usuario.aplicarCupom');    
+    Route::post('/carrinho/aplicar','aplicarCupom')->name('usuario.aplicarCupom'); 
+    Route::get('/produto', 'produto')->name('home.produto');
 });
 
 

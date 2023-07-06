@@ -8,6 +8,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Validation\Rule;
+use App\Models\Produto;
 
 class HomeController extends Controller
 {
@@ -70,6 +71,16 @@ class HomeController extends Controller
         $user = Auth::user();
         return view('home.formasPagamento', compact('user'));
     }
+
+    public function produto()
+    {
+        $produtos = Produto::all();
+        return view('home.produto', compact('produtos'));
+    }
+
+
+
+
 
     public function aplicarCupom(Request $request)
     {
