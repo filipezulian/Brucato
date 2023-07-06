@@ -20,17 +20,18 @@ class UpdateRequest extends FormRequest
      * @return array<string, \Illuminate\Contracts\Validation\ValidationRule|array|string>
      */
     public function rules(): array
-    {
+   {
         return [
             'nome' => 'required|max:50',
             'descricao' => 'max:250',
-            'peso' => 'double|required',
-            'altura' => 'double|required',
-            'largura' => 'double|required',
-            'preco' => 'double|required',
+            'peso' => 'numeric|required',
+            'altura' => 'numeric|required',
+            'largura' => 'numeric|required',
+            'comprimento' => 'numeric|required',
+            'preco' => 'numeric|required',
             'imagem' => 'dimensions:min_width=100,min_height=200',
         ];
-    }
+   }
 
     public function mensagens()
     {
@@ -40,20 +41,23 @@ class UpdateRequest extends FormRequest
 
             'descricao.max'=> 'Permitido somente 250 caracteres',
 
-            'peso.double'=> 'Somente números',
+            'peso.numeric'=> 'Somente números',
             'peso.required'=> 'Campo obrigatório',
 
 
-            'altura.double'=> 'Somente números',
+            'altura.numeric'=> 'Somente números',
             'altura.required'=> 'Campo obrigatório',
 
-            'larura.double'=> 'Somente números',
+            'larura.numeric'=> 'Somente números',
             'larura.required'=> 'Campo obrigatório',
 
-            'preco.double'=> 'Somente números',
+            'comprimento.numeric'=> 'Somente números',
+            'comprimento.required'=> 'Campo obrigatório',
+            
+            'preco.numeric'=> 'Somente números',
             'preco.required'=> 'Campo obrigatório',
 
             'imagem.dimensions'=> 'Permitido somente imagens de 100x200px',
         ];
-    }
+     }
 }

@@ -22,14 +22,14 @@ class StoreRequest extends FormRequest
     public function rules(): array
     {
         return [
-        'CEP' => 'integer|required|max:8', 
-        'quantidade' => 'required|integer', 
-        'nome_local'=> 'required|max:100', 
-        'id_produto' => 'required',
+       'CEP' => 'integer|required|max:8', 
+       'quantidade' => 'required|integer', 
+       'nome_local'=> 'required|max:100', 
+       'id_produto' => 'required',
         ];
     }
 
-    public function mensagens(){
+   public function mensagens(){
         [
             'CEP.integer' => 'Somente números',
             'CEP.required' => 'Campo obrigatório',

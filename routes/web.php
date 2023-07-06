@@ -75,18 +75,25 @@ Route::controller(LoginController::class)->group(function () {
 });
 
 //ROTAS DE FUNCIONARIO ----- PRODUTOS
-Route::controller(ProdutoController::class)->group(function () {
+Route::get('/prodfunc', [App\Http\Controllers\ProdutoController::class, 'index'])->name('produto.index');
+Route::get('/prodfunc/create', [App\Http\Controllers\ProdutoController::class, 'create'])->name('produto.create');
+Route::post('/prodfuncs', [App\Http\Controllers\ProdutoController::class, 'store'])->name('produto.store');
+Route::delete('/prodfunc/delete/{id_produto}', [App\Http\Controllers\ProdutoController::class, 'delete'])->name('produto.delete');
+Route::get('/prodfunc/edit/{id_produto}', [App\Http\Controllers\ProdutoController::class, 'edit'])->name('produto.edit');
+Route::put('/prodfunc/update/{id_produto}', [App\Http\Controllers\ProdutoController::class, 'update'])->name('produto.update');
+Route::get('/prodfunc/show/{id_produto}', [App\Http\Controllers\ProdutoController::class, 'show'])->name('produto.show');
 
-    Route::get('/prodfunc', 'index')->name('produto.index');
 
-    Route::get('/prodfunc/create', 'create')->name('produto.create');
-    Route::post('/prodfunc', 'store')->name('produto.store');
-    Route::get('/prodfunc/delete/{id}', 'delete')->name('produto.delete');
-});
+//ROTAS DE FUNCIONARIO ----- ESTOQUE
+Route::get('/estfunc', [App\Http\Controllers\EstoqueController::class, 'index'])->name('estoque.index');
+Route::get('/estfunc/create', [App\Http\Controllers\EstoqueController::class, 'create'])->name('estoque.create');
+Route::post('/estfuncs', [App\Http\Controllers\EstoqueController::class, 'store'])->name('estoque.store');
+Route::delete('/estfunc/delete/{id_estoque}', [App\Http\Controllers\EstoqueController::class, 'delete'])->name('estoque.delete');
+Route::get('/estfunc/edit/{id_estoque}', [App\Http\Controllers\EstoqueController::class, 'edit'])->name('estoque.edit');
+Route::put('/estfunc/update/{id_estoque}', [App\Http\Controllers\EstoqueController::class, 'update'])->name('estoque.update');
+Route::get('/estfunc/show/{id_estoque}', [App\Http\Controllers\EstoqueController::class, 'show'])->name('estoque.show');
 
-Route::get('/prodfunc/{id}/edit', [App\Http\Controllers\ProdutoController::class, 'edit'])->name('produto.edit');
-Route::put('/prodfunc/update', [App\Http\Controllers\ProdutoController::class, 'update'])->name('produto.update');
-Route::get('/prodfunc/search', [App\Http\Controllers\ProdutoController::class, 'search'])->name('produto.search');
+Route::get('estfunc/pdf', [App\Http\Controllers\EstoqueController::class, 'pdf'])->name('estoque.pdf');
 
 //ROTAS DE FUNCIONARIO ------ CLIENTES
 Route::get('/cliente', [App\Http\Controllers\ClienteController::class, 'index'])->name('cliente.index');

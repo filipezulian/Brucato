@@ -19,6 +19,8 @@
     <!-- CSS Funcionario -->
     <link rel="stylesheet" href="/css/css_func/funcionario.css">
 
+
+
 </head>
 
 <body>
@@ -29,6 +31,7 @@
         <div class="nav_items">
             <a class="navItems" href="{{url('')}}">_Home_</a>
             <a class="navItems" href="{{url('prodfunc')}}">Produtos</a>
+            <a class="navItems" href="{{url('estfunc')}}">Estoque</a>
             <a class="navItems" href="{{url('cliente')}}">Clientes</a>
             <a class="navItems" href="{{url('')}}">_Pedidos_</a>
             <a class="navItems" href="{{url('transportadora')}}">Transportadoras</a>

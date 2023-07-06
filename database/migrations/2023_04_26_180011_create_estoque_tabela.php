@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('nome_local', 100);
             $table->unsignedInteger('id_produto');
             $table->foreign('id_produto')->references('id_produto')->on('produto');
+            $table->timestamps();
         });
     }
 

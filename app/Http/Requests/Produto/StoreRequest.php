@@ -24,11 +24,12 @@ class StoreRequest extends FormRequest
         return [
             'nome' => 'required|max:50',
             'descricao' => 'max:250',
-            'peso' => 'double|required',
-            'altura' => 'double|required',
-            'largura' => 'double|required',
-            'preco' => 'double|required',
-            'imagem' => 'dimensions:min_width=100,min_height=200',
+            'peso' => 'required',
+            'altura' => 'required',
+            'largura' => 'required',
+            'comprimento' => 'required',
+            'preco' => 'required',
+            // 'imagem' => 'dimensions:min_width=100,min_height=200',
         ];
     }
 
@@ -40,20 +41,23 @@ class StoreRequest extends FormRequest
 
             'descricao.max'=> 'Permitido somente 250 caracteres',
 
-            'peso.double'=> 'Somente números',
+           // 'peso.double'=> 'Somente números',
             'peso.required'=> 'Campo obrigatório',
 
 
-            'altura.double'=> 'Somente números',
+           // 'altura.double'=> 'Somente números',
             'altura.required'=> 'Campo obrigatório',
 
-            'larura.double'=> 'Somente números',
+            //'larura.double'=> 'Somente números',
             'larura.required'=> 'Campo obrigatório',
 
-            'preco.double'=> 'Somente números',
+           // 'comprimento.double'=> 'Somente números',
+            'comprimento.required'=> 'Campo obrigatório',
+
+           // 'preco.double'=> 'Somente números',
             'preco.required'=> 'Campo obrigatório',
 
-            'imagem.dimensions'=> 'Permitido somente imagens de 100x200px',
+          //  'imagem.dimensions'=> 'Permitido somente imagens de 100x200px',
         ];
     }
 }

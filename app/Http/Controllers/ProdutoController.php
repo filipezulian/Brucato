@@ -25,7 +25,7 @@ class ProdutoController extends Controller
      */
     public function create()
     {
-        return view('telas_funcionario.produtos.create');
+        return view('telas_funcionario.produtos.add_produtos');
     }
 
     /**
@@ -33,47 +33,82 @@ class ProdutoController extends Controller
      */
     public function store(StoreRequest $request)
     {
-        Produto::create($request->all());
+       
+
+       if ($request->hasFile('imagem') && $request->imagem->isValid()) {
+      //$imagePath = $request->imagem->move('produtos', 'public');
+          // dd($request->imagem->store('produtos'));
+       // $data['imagem'] = $imagePath;
+       
+
+        //  $requestImage = $request->imagem;
+        //  $extension = $requestImage->extension();
+        //  $imageName = md5($requestImage->imagem->getClientOriginalNmae() . strtotime("now"));
+        // $request->imagem->move(storage_path('app/public/produtos'), $imageName);
+        // $event->imagem = $imageName;
+
+
+    //      $file = $request->file('imagem');
+    //      $image_name = time() . '_' . $file->getClientOriginalName();
+    //      $file->move(storage_path('app/public/produtos'), $image_name);
+     }
+
+        $produto = Produto::create(array_merge($request->all()));
+        //dd($request->imagem->store('produtos'));
+
+
+
         return redirect()->route('produto.index');
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(Produto $produtos)
+    public function show($nome)
     {
-        return view('telas_funcionario.produtos.show', compact('produtos'));
+
+        $produto = Produto::where('nome', $nome)->firstOrFail();
+      //  return view('telas_funcionario.produtos.show', compact('produtos'));
+        return view('telas_funcionario.produtos.show_produto', compact('produto'));
+
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit($id)
+    public function edit($id_produto)
     {
-        $produto = Produto::find($id);
-        if (!$produto) {
-           var_dump('$produto');
-        }
-
-        $produtoTitle = ucwords($produto->nome);
-        return view('telas_funcionario.produtos.editar_produtos', compact('produto'));
+        $produtos = Produto::findOrFail($id_produto);    
+        // $produto = Produto::find($id);
+        //$produtoTitle= ucwords($produtos->nome);
+        return view('telas_funcionario.produtos.editar_produtos', compact('produtos'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateRequest $request, Produto $produtos)
+    public function update(Request $request, $id_produto)
     {
-        $produtos->update($request->all());
+        $produto = Produto::find($id_produto);
+        $produto->nome = $request->nome;
+        $produto->descricao = $request->descricao;
+        $produto->peso = $request->peso;
+        $produto->altura = $request->altura;
+        $produto->largura = $request->largura;
+        $produto->preco = $request->preco;
+        $produto->imagem = $request->imagem;
+        $produto->save();
+
+       // $produtos ->update($request->all());
         return redirect()->route('produto.index');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function delete(Produto $produtos)
+    public function delete($id_produto)
     {
-        $produto = Produto::find($id);
+        $produto = Produto::find($id_produto);
         $produto->delete();
         return redirect()->route('produto.index');
     }

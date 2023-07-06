@@ -18,8 +18,10 @@ return new class extends Migration
             $table->double('peso')->notNullable();
             $table->double('altura')->notNullable();
             $table->double('largura')->notNullable();
+            $table->double('comprimento')->notNullable();
             $table->double('preco')->notNullable();
             $table->string('imagem');
+            $table->timestamps();
         });
     }
 

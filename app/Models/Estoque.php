@@ -23,7 +23,7 @@ class Estoque extends Model
 
     public function produto()
     {
-        return $this->belongsTo(produto::class);
+        return $this->belongsTo(produto::class, 'id_produto');
     }
 
     //fazer relção com pedido - pediu, baixa do estoque 

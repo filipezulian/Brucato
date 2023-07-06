@@ -7,9 +7,21 @@
 <body>
     <div class="container">
         <h1 style="color: #5c5c5c">Adicionar Produto</h1>
+       <style>
+        .scroll-view{
+            heigth: 300px;
+            overflow-y: scroll;
+        }
+
+        .btn_adicionar {
+                margin-bottom: 70px; 
+            }
+        </style>
         <div class="form">
-            <form method="POST" action="{{route('produto.store')}}">
-                @csrf
+        <div class="scroll-view">  
+            <form method="POST" action="{{route('produto.store')}}" enctype="multipart/form-data" >
+               
+            @csrf
                 <div class="">
                     <label for="nome" class="" style="font-weight: 750;">Nome:</label>
                     <input type="text" id="nome" class="form-control formText seperate" placeholder="Maximo de 50 Caracteres" name="nome" required>
@@ -31,16 +43,48 @@
                     <input type="number" id="largura" step="0.01" class="form-control formText seperate" placeholder="Largura em centimetros(cm)" pattern="\d+(\.\d{1,2})?" name="largura" min="0" required>
                 </div>
                 <div class="">
-                    <label for="preco" class="formText seperate" style="font-weight: 750;">Preço:</label>
-                    <input type="number" id="preco" step="0.01" class="form-control formText seperate" placeholder="R$0.00" pattern="\d+(\.\d{1,2})?" name="preco" min="0" required>
+                    <label for="comprimento" class="" style="font-weight: 750;">Comprimento:</label>
+                    <input type="number" id="comprimento" step="0.01" class="form-control formText seperate" placeholder="Comprimento em centimetros(cm)" pattern="\d+(\.\d{1,2})?" name="comprimento" min="0" required>
                 </div>
                 <div class="">
-                    <label for="imagem" class="formText seperate" style="font-weight: 750;">Imagens:</label>
-                    <input type="file" id="imagem" class="form-control formText seperate" name="imagem">
+                    <label for="preco" class="formText seperate" style="font-weight: 750;">Preço:</label>
+                    <input type="number" id="preco" step="0.01" class="form-control formText seperate" placeholder="R$0.00" pattern="\d+(\.\d{1,2})?" name="preco" min="0" required> 
                 </div>
-                <button type="submit" class="">Adicionar</button>
+                <div class="">
+                    <label for="imagem" class="formText seperate" style="font-weight: 750;">Imagem:</label>
+                    <input type="file" id="imagem" class="form-control formText seperate" name="imagem">
+                    <div class="image-container">
+                        <img id="preview" class="product-image" src="#" alt="Preview da Imagem">
+                    </div>
+                    <script>
+                        function readURL(input) {
+                            if (input.files && input.files[0]) {
+                                var reader = new FileReader();
+                                
+                                reader.onload = function(e) {
+                                    document.getElementById('preview').setAttribute('src', e.target.result);
+                                }
+                                
+                                reader.readAsDataURL(input.files[0]); 
+                            }
+                        }
+                        
+                        document.getElementById('imagem').addEventListener('change', function(){
+                            readURL(this);
+                        });
+                    </script>
+                
+                </div>
+
+
+
+                <button type="submit" class="btn_adicionar">Adicionar</button>
+                
+            
+            
             </form>
         </div>
+    </div>
     </div>
     @section('footer')
     <a class="texto_botao_generico" href="{{ route('produto.index') }}">

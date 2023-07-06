@@ -22,27 +22,18 @@ class UpdateRequest extends FormRequest
     public function rules(): array
     {
         return [
-        'CEP' => 'integer|required|max:8', 
+      
         'quantidade' => 'required|integer', 
-        'nome_local'=> 'required|max:100', 
-        'id_produto' => 'required',
+    
         ];
     }
 
     public function mensagens(){
         [
-            'CEP.integer' => 'Somente números',
-            'CEP.required' => 'Campo obrigatório',
-            'CEP.max' => 'Máximo de 8 números',
-
+            
             'quantidade.required' => 'Campo obrigatório',
             'quantidade.integer' => 'Somente numeros inteiros',
 
-            'nome_local.required' => 'Campo obrigatório',
-            'nome_local.max' => 'Máximo de 100 caracteres',
-
-            'id_produto.required' => 'Campo obrigatório',
-            
         ];
     }
 }
