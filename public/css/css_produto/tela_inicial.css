@@ -1,0 +1,582 @@
+* {
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    color: #2b2b2b;
+}
+
+body {
+    width: 100%;
+    min-height: 10rem;
+    background-color: #fafafa;
+}
+
+.body_produto {
+    width: 100%;
+    min-height: 10rem;
+    background-color: rgb(217, 217, 217);
+}
+
+.headerGeneric {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 5rem;
+    left: 0;
+    top: 0;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.25);
+    background-color: rgb(91, 133, 217);
+}
+
+.nav_btn_usuario a {
+    text-decoration: none;
+}
+
+.nav_items {
+    display: flex;
+    width: 75%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.nav_text {
+    font-weight: 500;
+    color: #2b2b2b;
+    text-decoration: none;
+    font-size: 1.7em;
+}
+
+.nav_text_home {
+    color: rgb(243, 237, 237);
+    font-weight: 700;
+}
+
+.nav_text_produto {
+    color: rgb(243, 237, 237);
+    font-weight: 700;
+}
+
+.nav_text_carrinho {
+    color: rgb(243, 237, 237);
+    font-weight: 700;
+}
+
+.user_img {
+    padding-top: 5px;
+    height: 45px;
+}
+
+.header_img {
+    padding-top: 5px;
+    height: 65px;
+    justify-content: flex-start;
+}
+
+.pesquisar {
+    width: 18rem;
+    display: flex;
+}
+
+.search_bar {
+    position: relative;
+    align-items: center;
+    margin-top: 3%;
+    margin-left: 10%;
+
+}
+
+.search_bar input[type='text'] {
+    float: left;
+    width: 75%;
+    height: 40px;
+
+    border: none;
+    outline: none;
+    padding-left: 10px;
+    box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.25);
+    background: #fafafa;
+    border-radius: 5px 0 0 0;
+}
+
+.search_bar a {
+    float: left;
+    width: 10%;
+    height: 40px;
+    border: none;
+    background: rgb(91, 133, 217);
+    box-shadow: 10px 4px 4px 3px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    align-items: center;
+}
+
+.pesquisa_img {
+    height: 25px;
+}
+
+.home_block {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: 38vw;
+    background: rgb(90, 133, 216);
+    box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    margin-top: 2.5%;
+}
+
+.title_home_block {
+    font-size: 2.3em;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: underline;
+    margin: 0.5em 0.2em 0.2em 1em;
+}
+
+.main_items_home_block {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: 30vw;
+    background: rgb(217, 217, 217);
+    box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    margin-top: 1.5%;
+}
+
+.produtos_list {
+    background-color: rgb(248, 89, 89);
+    margin-top: 8.5%;
+    width: 90%;
+    height: 40em;
+    border-radius: 20px;
+}
+
+.produtos_list p {
+    font-size: 30px;
+}
+
+.box_carrinho {
+    width: 80%;
+    height: 45em;
+    background: rgb(91, 133, 217);
+    margin-top: 4%;
+    border-radius: 20px;
+    overflow: auto;
+}
+
+.box_carrinho_produto {
+    margin-top: 1%;
+    width: 98%;
+    height: 31%;
+    background: rgb(255, 116, 116);
+    border-radius: 20px;
+}
+
+.box_carrinho_total {
+    width: 98%;
+    height: 21%;
+    border-top: 5px solid rgb(74, 103, 158);
+    border-bottom: 5px solid rgb(74, 103, 158);
+    margin-left: 1em;
+}
+
+.box_carrinho_infos {
+    width: 98%;
+    height: 29%;
+    border-radius: 20px;
+}
+
+.box_carrinho_btns {
+    width: 98%;
+    height: 15%;
+    border-radius: 20px;
+}
+
+.btn_continua_compra {
+    float: left;
+    background-color: rgb(191, 191, 191);
+    border-radius: 20px;
+    border: none;
+    width: 20%;
+    height: 75px;
+    font-size: 1.6em;
+    text-transform: uppercase;
+    margin: 0.6em 1em;
+}
+
+.btn_finalizar {
+    float: right;
+    background-color: rgb(136, 192, 16);
+    border: none;
+    border-radius: 20px;
+    width: 10%;
+    height: 75px;
+    font-size: 1.6em;
+    text-transform: uppercase;
+    margin: 0.6em 1em;
+}
+
+.box_carrinho_infos p {
+    text-transform: uppercase;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    font-weight: bold;
+    margin: 0 0 0 10px;
+    width: max-content;
+    font-size: 1.1em;
+    display: inline;
+}
+
+.box_carrinho_infos input {
+    border-radius: 10px;
+    height: 2.5em;
+    margin-right: 1em;
+    background-color: rgb(144, 181, 252);
+    border: none;
+}
+
+.input_maior {
+    width: 40em;
+}
+
+.main_pedido {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    width: 75%;
+    height: 49.9em;
+}
+
+.headerUsuario {
+    background-color: #d9d9d9;
+}
+
+.display_line_info {
+    margin-top: 1em;
+    width: 65em;
+    height: 35px;
+    border-radius: 20px;
+    display: flex;
+    padding-right: 1px;
+    font-size: 1.3em;
+    background-color: #fafafa;
+}
+
+.display_line_info_pedidos {
+    margin-top: 2.5px;
+    position: relative;
+    width: 65em;
+    height: 3em;
+    border-radius: 20px;
+    display: flex;
+    font-size: 1.3em;
+    flex-direction: row;
+    padding-top: 15px;
+    background-color: rgb(90, 131, 214);
+}
+
+.display_generico_line {
+    display: flex;
+    position: relative;
+    align-items: left;
+    margin-top: 3em;
+    border-radius: 20px;
+    width: 85em;
+    height: 75%;
+    background-color: #fafafa;
+}
+
+.text_display_line {
+    width: auto;
+    height: 1.65em;
+}
+
+.text_display_line_data {
+    width: 5em;
+    height: 1.65em;
+}
+
+.text_display_line_nome {
+    width: 32em;
+    height: 1.65em;
+}
+
+.text_display_line_status {
+    width: 13em;
+    height: 1.65em;
+}
+
+.row {
+    overflow: auto;
+    display: inline;
+}
+
+.col-2 {
+    float: left;
+    margin-left: 1%;
+    margin-top: 1%;
+}
+
+.ta_endereco input {
+    font-size: 1em;
+    text-align: left;
+    font-weight: bold;
+    padding-left: 0.5em;
+}
+
+.ta_pagamento {
+    margin-top: 12%;
+}
+
+.ta_pagamento input {
+    font-size: 1em;
+    text-align: left;
+    font-weight: bold;
+    padding-left: 0.5em;
+}
+
+.ta_cupom {
+    float: right;
+    display: inline;
+    margin-right: 2em;
+}
+
+.ta_cupom p {
+    text-align: center;
+    margin-left: 1.2em;
+
+}
+
+.ta_cupom input {
+    display: block;
+    text-align: center;
+
+}
+
+.ta_cupom button {
+    margin: 1em 0 0 3em;
+    padding: 0.5em 1em;
+    justify-content: center;
+    border-radius: 10px;
+    border: 5px solid rgb(74, 103, 158);
+    ;
+    background-color: rgb(139, 174, 243);
+
+}
+
+.box_title_icon {
+    width: 40em;
+    display: inline-block;
+}
+
+.icon_pencil {
+    height: 30px;
+    float: right;
+}
+
+.box_carrinho_total {
+    display: inline-block;
+}
+
+.title_text {
+    margin: 0.2em 0 0 1em;
+    float: left;
+    display: block;
+    width: fit-content;
+}
+
+.title_text_normal {
+    margin: 0;
+    font-size: 1.7em;
+}
+
+.title_text_big {
+    margin: 0;
+    font-size: 2.3em;
+    font-weight: bold;
+}
+
+.valores_input {
+    float: right;
+    display: grid;
+}
+
+.input_valor {
+    display: inline;
+    margin-left: 37%;
+    border-radius: 10px;
+    height: 2.5em;
+    width: 10em;
+    margin-top: 0.25em;
+    margin-right: 1em;
+    background-color: rgb(144, 181, 252);
+    border: none;
+    font-size: 1em;
+    padding-top: 5px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.input_valor_total {
+    border-radius: 10px;
+    width: 15em;
+    height: 2.5em;
+    margin-top: 0.3em;
+    margin-right: 1em;
+    background-color: rgb(144, 181, 252);
+    border: none;
+    padding-top: 5px;
+    font-size: 1.1em;
+    text-align: center;
+    font-weight: bold;
+}
+
+/*
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+*/
+
+.nav_text_usuario {
+    font-weight: 500;
+    color: rgb(253, 253, 253);
+    text-decoration: underline;
+    font-size: 2em;
+}
+
+.nav_items_usuario {
+    display: grid;
+    width: 25%;
+    height: 55.4em;
+    justify-content: center;
+    background-color: rgb(45, 70, 120);
+    float: left;
+}
+
+.nav_items_usuario img {
+    margin-top: 5em;
+    height: 8em;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.nav_items_usuario a {
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    text-align: center;
+}
+
+.nav_items_usuario button {
+    height: fit-content;
+    background-color: rgb(255, 104, 104);
+    padding: 5px;
+    display: block;
+    justify-content: left;
+    padding: 1em 2em;
+    color: #fafafa;
+    border: none;
+    border-radius: 15px;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 1.1em;
+}
+
+.main_usuario {
+    display: grid;
+    width: 75%;
+    height: 49.9em;
+    justify-content: left;
+    align-items: center;
+}
+
+.box_main_usuario {
+    margin-left: 3em;
+}
+
+.box_main_usuario label {
+    justify-content: left;
+    margin-top: 2.5em;
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+.inputs_main_usuario {
+    display: grid;
+}
+
+
+.inputs_main_usuario input {
+    width: 35em;
+    height: 2.5em;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    padding-left: 1em;
+}
+
+.main_btn_usuario button {
+    background: rgb(137, 207, 125);
+    float: right;
+    margin-top: 1em;
+    padding: 0.7em 1.7em;
+    border: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+.main_btn_usuario_pag button {
+    background: rgb(137, 207, 125);
+    float: right;
+    margin-top: 1em;
+    padding: 0.7em 1.7em;
+    border: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+.main_btn_formasPag_editar button {
+    display: inline;
+    background: rgb(137, 207, 125);
+    padding: 0.2em 0.8em;
+    border: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 20px;
+}
+
+.main_btn_formasPag_delete button {
+    display: inline;
+    position: relative;
+    background: rgb(207, 125, 125);
+    padding: 0.2em 0.8em;
+    border: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 20px;
+}
+
+.btn_delete_usuario {
+    background: rgb(207, 125, 125);
+    float: left;
+    margin-top: 1em;
+    padding: 0.7em 1.7em;
+    border: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+.btn_aplicar_cupom {
+    display: grid;
+    padding: 1em 2em;
+}
