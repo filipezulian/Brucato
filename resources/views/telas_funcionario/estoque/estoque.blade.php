@@ -80,7 +80,8 @@
                 <table>
 
 
-        </div>
+        </d
+        iv>
 
         @section('footer')
         <a class="texto_botao_generico" href="{{ route('estoque.create') }}">
@@ -89,7 +90,7 @@
             </div>
         </a>
 
-        <a href="{{route('estoque.pdf', $estoques)}}" class="texto_botao_generico">
+        <a href="{{route('estoque.pdf', $estoque)}}" class="texto_botao_generico">
             <div class="botaoGenerico">
                 Gerar relatorio de estoque
             </div>
