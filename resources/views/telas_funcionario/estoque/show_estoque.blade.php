@@ -28,7 +28,7 @@
 
 </div>
 @section('footer')
-    <a class="texto_botao_generico" href="{{ route('produto.index') }}">
+    <a class="texto_botao_generico" href="{{ route('estoque.index') }}">
         <div class="botaoGenerico">
             Voltar
         </div>

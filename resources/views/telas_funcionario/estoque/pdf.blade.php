@@ -45,7 +45,7 @@
 
 
             <div class="text-right">
-                Data do Relatório: {{ date('d/m/Y') }}
+            Data do Relatório: {{ now()->format('d/m/Y') }}
             </div>
 
 

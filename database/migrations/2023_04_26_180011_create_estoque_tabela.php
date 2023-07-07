@@ -19,6 +19,7 @@ return new class extends Migration
             $table->unsignedInteger('id_produto');
             $table->foreign('id_produto')->references('id_produto')->on('produto');
             $table->timestamps();
+           
         });
     }
 

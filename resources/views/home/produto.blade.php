@@ -55,6 +55,8 @@
                         <th scope='col'>Altura</th>
                         <th scope='col'>Largura</th>
                         <th scope='col'>Comprimento</th>
+                        
+
                     </tr>
                 </thead>
                 <tbody class="showProducts_info">
