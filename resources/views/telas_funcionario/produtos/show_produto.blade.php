@@ -41,7 +41,7 @@
                 <p class="card-title">Comprimento: {{ $produto->comprimento }}</p>
 
                 <div class="image-container">
-                    <img src="{{$produto->imagem}}" alt="Imagem" class="product-image">
+                    <img src="/img/{{$produto->nome}}.jpg" alt="Imagem" class="product-image">
                 </div>
 
             </div>

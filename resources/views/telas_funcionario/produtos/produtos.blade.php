@@ -4,15 +4,9 @@
 
 @section('content')
 
-
-
 <head>
     <link href="{{ asset('css/css_func/estoque.css') }}" rel="stylesheet">
 </head>
-
-
-
-
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
     $(document).ready(function() {
@@ -24,12 +18,6 @@
         });
     });
 </script>
-
-
-
-
-
-
 <body>
     <div class="container">
         <div class="TopSearch">
@@ -40,15 +28,7 @@
             <h5 class="page-title">
                 Para editar aperte no ID, e para ver detalhes aperte no nome.
             </h5>
-
-
-
-
-
             <input class="input_search" id="search-input" title="ADICIONAR_TITULO_AQUI" placeholder="Pesquise aqui" type="text">
-
-
-
             <table class="table" style="margin-top:1em; background-color: #fafafa;" >
                 <thead style="background-color: rgb(121, 157, 228);
     border-radius: 20px;height: 35px;">
@@ -72,25 +52,17 @@
                                 {{$produto->id_produto}}
                             </a>
                         </td>
-
-
                         <td>
                             @if ($produto->imagem)
-                            <img src="{{ asset('storage/'.$produto->imagem) }}" style="width: 100px; height: 100px; object-fit: cover;">
+                            <img src="/img/{{$produto->nome}}.jpg" style="width: 100px; height: 100px; object-fit: cover;">
 
                             @endif
                         </td>
-
-
-
                         <td>
                             <a href="{{route('produto.show', $produto->nome)}}">
                                 {{$produto->nome}}
                             </a>
                         </td>
-
-
-
                         <td>{{$produto->descricao}}</td>
                         <td>R$&nbsp;{{$produto->preco}}</td>
                         <td>{{$produto->peso }}</td>
@@ -101,14 +73,10 @@
                     @endforeach
                 </tbody>
                 <table>
-
-
         </div>
     </div>
 </body>
-
 @endsection
-
 @section('footer')
 <a class="texto_botao_generico" href="{{ route('produto.create') }}">
     <div class="botaoGenerico">

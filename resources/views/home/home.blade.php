@@ -32,7 +32,7 @@
                         <td>{{$produto->id_produto}}
                         <td>
                             @if ($produto->imagem)
-                            <img src="{{ asset('storage/'.$produto->imagem) }}" style="width: 100px; height: 100px; object-fit: cover; ">
+                            <img src="/img/{{$produto->nome}}.jpg" style="width: 100px; height: 100px; object-fit: cover; ">
 
                             @endif
                         </td>
