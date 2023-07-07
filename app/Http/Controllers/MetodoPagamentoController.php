@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\MetodoPagamento;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 
 class MetodoPagamentoController extends Controller
@@ -14,9 +15,9 @@ class MetodoPagamentoController extends Controller
     }
 
     public function store(Request $request){
-
+        $user = Auth::user();
         MetodoPagamento::create([
-            'id_usuario' => $request->input('id_usuario'),
+            'id_usuario' => $user->id,
             'numero_cartao' => $request->input('numero_cartao'),
             'nome_cartao' => $request->input('nome_cartao'),
             'validade_cartao' => $request->input('validade_cartao'),
@@ -35,7 +36,8 @@ class MetodoPagamentoController extends Controller
     }
 
     public function update(Request $request, MetodoPagamento $formasPagamento){
-        $formasPagamento->id_usuario = $request->input("id_usuario");
+        $user = Auth::user();
+        $formasPagamento->id_usuario = $user->id;
         $formasPagamento->numero_cartao = $request->input("numero_cartao");
         $formasPagamento->nome_cartao = $request->input("nome_cartao");
         $formasPagamento->validade_cartao = $request->input("validade_cartao");

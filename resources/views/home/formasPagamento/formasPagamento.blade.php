@@ -20,9 +20,6 @@
         <div class="main_pedido">
             <div class="display_line_info" >
                 <div class="coluna_display_line_top">
-                    <p class="text_display_line" style="margin-left: 4em;">Id Usuário</p>
-                </div>
-                <div class="coluna_display_line_top">
                     <p class="text_display_line" style="margin-left: 3em;">Número do Cartão</p>
                 </div>
                 <div class="coluna_display_line_top">
@@ -40,9 +37,6 @@
                     @foreach ($formasPagamento as $formasPagamento)
                     <div class="display_line">
                         <a class="atag_line" href="{{ url('formasPagamento/edit/' . $formasPagamento['id']) }}" style="font-weight: 600;">
-                            <div class="coluna_display_line">
-                                <p class="text_display_line">{{ $formasPagamento->id_usuario }}</p>
-                            </div>
                             <div class="coluna_display_line">
                                 <p class="text_display_line">{{ $formasPagamento->numero_cartao }}</p>
                             </div>

@@ -12,12 +12,6 @@
             @method('PUT')
             <div class="form_editar_formaPagamento">
 
-                <div style="display: none;">
-                    <label for="id_usuario" class="label_generic_add_cupom" style="font-weight: 750;">Id Usuario:</label>
-                    <input type="text" id="id_usuario" value='{{$formasPagamento->id_usuario}}' class="form-control formText seperate" name="id_usuario">
-                </div>
-
-
                 <label for="nome" class="label_generic_add_cupom" style="font-weight: 750;">Número:</label>
                 <input type="text" value='{{$formasPagamento->numero_cartao}}' id="numero_cartao" class="form-control formText seperate" name="numero_cartao">
 

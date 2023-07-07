@@ -18,7 +18,7 @@ class LoginController extends Controller
         $request->validate([
             'email' => 'required|email',
             'password' => 'required|min:5'
-        ],[
+        ], [
             'email.required' => 'O campo "E-mail" não pode estar vazio!',
             'email.email' => 'O campo "E-mail" tem que ter um E-mail valido!',
             'password.required' => 'O campo "Senha" não pode estar vazio!',
@@ -26,12 +26,16 @@ class LoginController extends Controller
         ]);
         $credentials = $request->only('email', 'password');
         $authenticated = Auth::attempt($credentials);
-        if(!$authenticated)
-        {
+        if (!$authenticated) {
             return redirect()->route('login.index')->withErrors(['error' => '"E-mail" ou "Senha" estão incorretos']);
         }
-        
+
         $user = Auth::user();
+
+        if ($user->id_funcionario) {
+            return redirect()->route('produto.index');
+        }
+
         session(['id_usuario' => $user->id]);
         return redirect()->route('home.index');
     }
@@ -43,14 +47,14 @@ class LoginController extends Controller
 
     public function auth(Request $request)
     {
-        $this->validate($request,[
+        $this->validate($request, [
             'cpf' => 'required',
             'password' => 'required'
         ]);
-        
-        if(Auth::attempt(['cpf' => $request->cpf, 'password' => $request->password])){
+
+        if (Auth::attempt(['cpf' => $request->cpf, 'password' => $request->password])) {
             dd('logou');
-        }else{
+        } else {
             dd('nao logou');
         }
     }

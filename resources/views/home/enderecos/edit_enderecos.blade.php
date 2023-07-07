@@ -11,13 +11,6 @@
             @csrf
             @method('PUT')
             <div class="form_editar_formaPagamento">
-
-                <div style="display: none;">
-                    <label for="id_usuario" class="label_generic_add_cupom" style="font-weight: 750;">Id Usuario:</label>
-                    <input type="text" id="id_usuario" value='{{$enderecos->id_usuario}}' class="form-control formText seperate" name="id_usuario">
-                </div>
-
-
                 <label for="endereco" class="label_generic_add_cupom" style="font-weight: 750;">Endereço:</label>
                 <input type="text" value='{{$enderecos->endereco}}' id="endereco" class="form-control formText seperate" name="endereco">
 

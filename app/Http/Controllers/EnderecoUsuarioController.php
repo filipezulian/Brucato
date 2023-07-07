@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\EnderecoUsuario;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 
 class EnderecoUsuarioController extends Controller
@@ -14,9 +15,9 @@ class EnderecoUsuarioController extends Controller
     }
 
     public function store(Request $request){
-
+        $user = Auth::user();
         EnderecoUsuario::create([
-            'id_usuario' => $request->input('id_usuario'),
+            'id_usuario' => $user->id,
             'endereco' => $request->input('endereco'),
             'complemento' => $request->input('complemento'),
             'cep' => $request->input('cep')
@@ -34,7 +35,8 @@ class EnderecoUsuarioController extends Controller
     }
 
     public function update(Request $request, EnderecoUsuario $enderecos){
-        $enderecos->id_usuario = $request->input("id_usuario");
+        $user = Auth::user();
+        $enderecos->id_usuario = $user->id;
         $enderecos->endereco = $request->input("endereco");
         $enderecos->complemento = $request->input("complemento");
         $enderecos->cep = $request->input("cep");

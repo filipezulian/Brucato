@@ -10,9 +10,6 @@
         <form class="form" method="POST" action="{{ route('formasPagamento.store') }}">
             <div class="form_add_formaPagamento">
                 @csrf
-                <label for="id_usuario" class="label_generic_add_cupom" style="font-weight: 750;">Id Usuario:</label>
-                <input type="text" id="id_usuario" class="form-control formText seperate" placeholder="Ex: 1" name="id_usuario" required>
-
                 <label for="nome" class="label_generic_add_cupom" style="font-weight: 750;">Número:</label>
                 <input type="text" id="numero_cartao" class="form-control formText seperate" placeholder="0000 0000 0000 0000" name="numero_cartao" required>
 

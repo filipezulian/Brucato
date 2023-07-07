@@ -20,9 +20,6 @@
         <div class="main_pedido">
             <div class="display_line_info" >
                 <div class="coluna_display_line_top">
-                    <p class="text_display_line" style="margin-left: 4em;">Id Usuário</p>
-                </div>
-                <div class="coluna_display_line_top">
                     <p class="text_display_line" style="margin-left: 3em;">Endereço</p>
                 </div>
                 <div class="coluna_display_line_top">
@@ -37,9 +34,6 @@
                     @foreach ($enderecos as $enderecos)
                     <div class="display_line">
                         <a class="atag_line" href="{{ url('enderecos/edit/' . $enderecos['id']) }}" style="font-weight: 600;">
-                            <div class="coluna_display_line">
-                                <p class="text_display_line">{{ $enderecos->id_usuario }}</p>
-                            </div>
                             <div class="coluna_display_line">
                                 <p class="text_display_line">{{ $enderecos->endereco }}</p>
                             </div>
