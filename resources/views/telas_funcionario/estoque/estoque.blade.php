@@ -40,12 +40,13 @@
             </h5>
 
 
-            <input class="input_search" id="search-input" title="ADICIONAR_TITULO_AQUI" placeholder="Pesquise aqui" type="text">
+            <input class="input_search" id="search-input" title="ADICIONAR_TITULO_AQUI" placeholder="Pesquise aqui" type="text" style="margin: 0 0 1em 0;">
 
 
 
             <table class="table">
-                <thead>
+                <thead style="background-color: rgb(121, 157, 228);
+    border-radius: 20px;height: 35px;">
                     <tr>
                         <th scope='col'>ID</th>
                         <th scope='col'>Nome Produto</th>
@@ -86,13 +87,13 @@
         @section('footer')
         <a class="texto_botao_generico" href="{{ route('estoque.create') }}">
             <div class="botaoGenericoPlus">
-                Adicionar novo estoque
+                Adicionar Novo Estoque
             </div>
         </a>
 
         <a href="{{route('estoque.pdf', $estoque)}}" class="texto_botao_generico">
-            <div class="botaoGenerico">
-                Gerar relatorio de estoque
+            <div class="botaoGenericoPlus">
+                Gerar Relatorio de Estoque
             </div>
         </a>
 

@@ -8,6 +8,7 @@
     <div class="home_block">
         <p class="title_home_block">PRODUTOS EM DESTAQUE:</p>
         <div class="main_items_home_block">
+            <span>{{$user->id}}</span>
             <span>{{$user->name}}</span>
             <span>{{$user->telefone}}</span>
             <span>{{$user->email}}</span>

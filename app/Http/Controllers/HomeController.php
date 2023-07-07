@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Carrinho;
 use App\Models\EnderecoUsuario;
+use App\Models\MetodoPagamento;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -63,24 +64,24 @@ class HomeController extends Controller
     public function enderecos()
     {
         $user = Auth::user();
-        return view('home.enderecos', compact('user'));
+        $endereco = EnderecoUsuario::where('id_usuario', $user->id)->get();
+        return view('home.enderecos', compact('endereco'));
     }
 
     public function formasPagamento()
     {
         $user = Auth::user();
-        return view('home.formasPagamento', compact('user'));
+        $formasPagamento = MetodoPagamento::where('id_usuario', $user->id)->get();
+
+        return view('home.formasPagamento.formasPagamento', compact('formasPagamento'));
     }
+
 
     public function produto()
     {
         $produtos = Produto::all();
         return view('home.produto', compact('produtos'));
     }
-
-
-
-
 
     public function aplicarCupom(Request $request)
     {

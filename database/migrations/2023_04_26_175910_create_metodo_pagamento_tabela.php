@@ -16,7 +16,7 @@ return new class extends Migration
             $table->unsignedBigInteger('id_usuario')->notNullable();
             $table->string('numero_cartao', 16)->notNullable();
             $table->string('nome_cartao', 50)->notNullable();
-            $table->string('validade_cartao', 4)->notNullable();
+            $table->string('validade_cartao', 5)->notNullable();
             $table->string('cvv_cartao', 3)->notNullable();
             $table->foreign('id_usuario')->references('id')->on('users');
         });        

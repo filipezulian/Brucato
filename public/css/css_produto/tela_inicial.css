@@ -286,9 +286,9 @@ body {
 }
 
 .display_generico_line {
-    display: flex;
     position: relative;
-    align-items: left;
+    align-items: center;
+    justify-content: center;
     margin-top: 3em;
     border-radius: 20px;
     width: 85em;
@@ -563,19 +563,6 @@ body {
     border-radius: 20px;
 }
 
-.main_btn_formasPag_delete button {
-    display: inline;
-    position: relative;
-    background: rgb(207, 125, 125);
-    margin: 1.4em 0 0 51em;
-    padding: 0.2em 0.8em;
-    font-size: 1.3em;
-    border: none;
-    text-transform: uppercase;
-    font-weight: bold;
-    border-radius: 20px;
-}
-
 .btn_delete_usuario {
     background: rgb(207, 125, 125);
     float: left;
@@ -590,4 +577,132 @@ body {
 .btn_aplicar_cupom {
     display: grid;
     padding: 1em 2em;
+}
+
+.btn_add_formasPagamento{
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1em;
+    border-radius: 20px;
+    width: 12rem;
+    height: 4rem;
+    background-color: rgb(91, 133, 217);
+    color:white;
+    font-size: 1.3em;
+    text-transform: uppercase;
+    font-weight: bold;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.texto_botao_generico{
+    text-decoration: none;
+}
+
+.form_add_formaPagamento{
+    padding:1em;
+    width: 80em;
+    height: 32.5em;
+    box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+}
+
+.form_editar_formaPagamento{
+    padding:2em 1em;
+    width: 80em;
+    height: 24em;
+    box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+}
+
+.btn_add_cupom{    
+    align-items: center;
+    justify-content: center;
+    margin: 2em 0 0 41.5%;
+    padding: 1em 2em;
+    border-radius: 20px;
+    background: rgb(91, 133, 217);
+    border: none;
+    font-size: 1.3em;
+    border-radius: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.atag_line {
+    display: flex;
+    flex-direction: row;
+    height: 60px;
+    width: 98%;
+    text-decoration: none;
+    margin: 0 1% 1em 1%;
+    border-radius: 10px;
+    color: #2b2b2b;
+    background-color: rgb(91, 133, 217);
+    padding-top: 18px;
+}
+
+
+.botaoGenerico{
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    border-radius: 20px;
+    width: 6rem;
+    height: 3rem;
+    background-color: #fafafa;
+    color: black;
+    text-decoration: none;
+    font-size: 1.3em;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.footer {
+    position: fixed;
+    width: 100%;
+    height: 5em;
+    bottom: 0;
+    background: rgb(179, 179, 179);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main_btn_usuario_editar{
+    width: 100%;
+    margin: 2em 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main_btn_usuario_editar button {
+    background: rgb(136, 192, 16);
+    border: none;
+    border-radius: 20px;
+    width: 140px;
+    height: 70px;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    align-items: center;
+    justify-content: center;
+}
+
+.main_btn_usuario_deletar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main_btn_usuario_deletar button {
+    background: rgb(248, 89, 89);
+    border: none;
+    border-radius: 20px;
+    width: 140px;
+    height: 70px;
+    font-size: 1.5em;
+    text-transform: uppercase;
 }

@@ -17,7 +17,7 @@ class EnderecoUsuario extends Model
     protected $fillable = [
         'id_usuario',
         'endereco',
-        'cep',
+        'cep'
     ];
 
     public function usuario()

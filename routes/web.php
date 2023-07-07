@@ -5,7 +5,10 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\CadastroController;
 use App\Http\Controllers\CupomController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\MetodoPagamentoController;
 use App\Http\Controllers\TransportadoraController;
+use App\Models\EnderecoUsuario;
+use App\Models\MetodoPagamento;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -45,6 +48,24 @@ Route::controller(CupomController::class)->group(function () {
     Route::get('/cupom/edit/{cupom}', 'edit')->name('cupom.edit');
     Route::put('/cupom/update/{cupom}', 'update')->name('cupom.update');
     Route::delete('/cupom/delete/{cupom}', 'delete')->name('cupom.delete');
+});
+
+//ROTAS DE CLIENTE ------ FORMAS DE PAGAMENTO
+Route::controller(MetodoPagamentoController::class)->group(function () {
+    Route::get('/formasPagamento', 'index')->name('formasPagamento.index');
+    Route::post('/formasPagamento', 'store')->name('formasPagamento.store');
+    Route::get('/formasPagamento/create', 'create')->name('formasPagamento.create');
+    Route::get('/formasPagamento/edit/{formasPagamento}', 'edit')->name('formasPagamento.edit');
+    Route::put('/formasPagamento/update/{formasPagamento}', 'update')->name('formasPagamento.update');
+    Route::delete('/formasPagamento/delete/{formasPagamento}', 'delete')->name('formasPagamento.delete');
+});
+
+//ROTAS DE CLIENTE ------ EDITAR ENDERECOS
+Route::controller(EnderecoUsuarioController::class)->group(function () {
+    Route::get('/enderecos', 'index')->name('enderecos.index');
+    Route::post('/enderecos', 'store')->name('enderecos.store');
+    Route::get('/enderecos/edit/{enderecos}', 'edit')->name('enderecos.edit');
+    Route::put('/enderecos/update/{enderecos}', 'update')->name('enderecos.update');
 });
 
 //pagina Usuario clientes

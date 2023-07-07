@@ -19,16 +19,16 @@
             <h1 style="color: #5c5c5c; text-align: center; padding:0.35em;height: 2em; background-color: #d9d9d9; padding-top: 1.5em">Editar Endereço</h1>
             <div class="main_usuario">
                 <div class="box_main_usuario">
-                    <form action="{{ route('home.update.usuario', $user->id) }}" method="POST">
+                    <form action="{{ url('home.enderecos/edit', $endereco->id_usuario) }}" method="POST">
                         @csrf
                         @method('PUT')
                         <label for="">Endereço:</label>
                         <div class="inputs_main_usuario">
-                            <input type="text" value="{{endereco_usuario->endereco}}" name="name">
+                            <input type="text" value="XXX" name="name">
                         </div>
                         <label for="">Complemento:</label>
                         <div class="inputs_main_usuario" >
-                            <input type="text" value="_pegar_endereco_" name="telefone">
+                            <input type="text" value="{{$endereco -> endereco}}" name="telefone">
                         </div>
                         <label for="">CEP:</label>
                         <div class="inputs_main_usuario">
