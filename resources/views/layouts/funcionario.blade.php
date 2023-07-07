@@ -29,7 +29,7 @@
             <img class="header_img" src="/img/logo_preto.png" alt="Brucato">
         </div>
         <div class="nav_items">
-            <a class="navItems" href="{{url('')}}">_Home_</a>
+            <a class="navItems" href="{{url('homeFunc')}}">Home</a>
             <a class="navItems" href="{{url('prodfunc')}}">Produtos</a>
             <a class="navItems" href="{{url('estfunc')}}">Estoque</a>
             <a class="navItems" href="{{url('cliente')}}">Clientes</a>

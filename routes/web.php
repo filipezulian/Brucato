@@ -125,3 +125,5 @@ Route::get('/cliente', [App\Http\Controllers\ClienteController::class, 'index'])
 
 //ROTAS DE FUNCIONARIO ------ PEDIDOS
 Route::get('/pedido', [App\Http\Controllers\PedidoController::class, 'index'])->name('pedido.index');
+
+Route::get('/homeFunc', [App\Http\Controllers\HomeFuncController::class, 'index'])->name('tela_inicial.index');

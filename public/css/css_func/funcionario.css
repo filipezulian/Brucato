@@ -553,3 +553,33 @@ footer {
     box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.25);
     border-radius: 20px;
 }
+
+.home_block {
+    display: flex;
+    flex-direction: column;    
+    width: 90%;
+    height: 37vw;
+    background: rgb(90, 133, 216);
+    box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    margin: 1.5% 5%;
+}
+
+.main_items_home_block {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: 29vw;
+    background: rgb(217, 217, 217);
+    box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    margin: 1.5% 5%;
+}
+
+.title_home_block {
+    font-size: 2.3em;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: underline;
+    margin: 0.5em 0.2em 0.2em 1em;
+}
