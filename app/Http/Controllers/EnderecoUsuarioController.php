@@ -9,7 +9,7 @@ class EnderecoUsuarioController extends Controller
 {
 
     public function index(){
-        $enderecoUsuario = EnderecoUsuario::all();
+        $enderecos = EnderecoUsuario::all();
         return view('home.enderecos', compact('enderecos'));
     }
 
@@ -18,23 +18,34 @@ class EnderecoUsuarioController extends Controller
         EnderecoUsuario::create([
             'id_usuario' => $request->input('id_usuario'),
             'endereco' => $request->input('endereco'),
+            'complemento' => $request->input('complemento'),
             'cep' => $request->input('cep')
         ]);
 
         return redirect()->route('home.enderecos');
     }
 
-    public function edit(EnderecoUsuario $endereco){
-        return view('home.enderecos', compact('enderecos'));
+    public function create(){
+        return view('home.enderecos.add_enderecos');
     }
 
-    public function update(Request $request, EnderecoUsuario $endereco){
-        $endereco->id_usuario = $request->input("id_usuario");
-        $endereco->endereco = $request->input("endereco");
-        $endereco->cep = $request->input("cep");
+    public function edit(EnderecoUsuario $enderecos){
+        return view('home.enderecos.edit_enderecos', compact('enderecos'));
+    }
 
-        $endereco->save();
+    public function update(Request $request, EnderecoUsuario $enderecos){
+        $enderecos->id_usuario = $request->input("id_usuario");
+        $enderecos->endereco = $request->input("endereco");
+        $enderecos->complemento = $request->input("complemento");
+        $enderecos->cep = $request->input("cep");
+
+        $enderecos->save();
 
         return redirect()->route('home.enderecos');
-    }   
+    }     
+
+    public function delete(EnderecoUsuario $enderecos){
+        $enderecos->delete();
+        return redirect()->route('home.enderecos');
+    }
 }

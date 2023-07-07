@@ -9,7 +9,7 @@
         <h1 style="color: #5c5c5c">Adicionar Produto</h1>
        <style>
         .scroll-view{
-            heigth: 300px;
+            height: 300px;
             overflow-y: scroll;
         }
 

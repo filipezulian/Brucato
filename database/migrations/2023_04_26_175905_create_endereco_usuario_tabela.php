@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('id_usuario');
             $table->string('endereco', 250)->nullable();
+            $table->string('complemento')->nullable();
             $table->integer('cep')->nullable();
             $table->foreign('id_usuario')->references('id')->on('users');
         });

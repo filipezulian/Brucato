@@ -4,6 +4,7 @@ use App\Http\Controllers\ProdutoController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\CadastroController;
 use App\Http\Controllers\CupomController;
+use App\Http\Controllers\EnderecoUsuarioController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MetodoPagamentoController;
 use App\Http\Controllers\TransportadoraController;
@@ -64,8 +65,10 @@ Route::controller(MetodoPagamentoController::class)->group(function () {
 Route::controller(EnderecoUsuarioController::class)->group(function () {
     Route::get('/enderecos', 'index')->name('enderecos.index');
     Route::post('/enderecos', 'store')->name('enderecos.store');
+    Route::get('/enderecos/create', 'create')->name('enderecos.create');
     Route::get('/enderecos/edit/{enderecos}', 'edit')->name('enderecos.edit');
     Route::put('/enderecos/update/{enderecos}', 'update')->name('enderecos.update');
+    Route::delete('/enderecos/delete/{enderecos}', 'delete')->name('enderecos.delete');
 });
 
 //pagina Usuario clientes

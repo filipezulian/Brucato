@@ -65,8 +65,8 @@ class HomeController extends Controller
     public function enderecos()
     {
         $user = Auth::user();
-        $endereco = EnderecoUsuario::where('id_usuario', $user->id)->get();
-        return view('home.enderecos', compact('endereco'));
+        $enderecos = EnderecoUsuario::where('id_usuario', $user->id)->get();
+        return view('home.enderecos.enderecos', compact('enderecos'));
     }
 
     public function formasPagamento()
