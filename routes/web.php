@@ -62,7 +62,7 @@ Route::controller(HomeController::class)->group(function () {
 });
 
 
-//pagina cadastro cliente
+//pagina cadastro 
 Route::controller(CadastroController::class)->group(function () {
     Route::get('/cadastro', 'index')->name('cadastro.index');
     Route::post('/cadastro', 'store')->name('cadastro.store');
