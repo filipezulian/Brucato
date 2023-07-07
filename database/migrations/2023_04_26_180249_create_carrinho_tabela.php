@@ -17,7 +17,7 @@ return new class extends Migration
             $table->unsignedInteger('id_produto')->nullable();
             $table->integer('quantidade_produto')->nullable();
             $table->double('preco_total');
-            $table->foreign('id_usuario')->references('id')->on('users');
+            $table->foreign('id_usuario')->references('id')->on('users')->onDelete('cascade');
             $table->foreign('id_produto')->references('id_produto')->on('produto');
         });
         

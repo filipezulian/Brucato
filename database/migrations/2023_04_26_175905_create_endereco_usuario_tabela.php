@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('endereco', 250)->nullable();
             $table->string('complemento')->nullable();
             $table->integer('cep')->nullable();
-            $table->foreign('id_usuario')->references('id')->on('users');
+            $table->foreign('id_usuario')->references('id')->on('users')->onDelete('cascade');
         });
     }
 
