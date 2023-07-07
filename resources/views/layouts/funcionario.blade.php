@@ -36,9 +36,7 @@
             <a class="navItems" href="{{url('')}}">_Pedidos_</a>
             <a class="navItems" href="{{url('transportadora')}}">Transportadoras</a>
             <a class="navItems" href="{{url('cupom')}}">Cupom</a>
-        </div>
-        <div class="img_icon_func">
-            <a href="{{url('')}}"><img class="user_img" src="/img/user.png" alt="Usuario"></a>
+            <a class="navItems" href="{{url('')}}">Logout</a>
         </div>
     </header>
     
