@@ -62,7 +62,7 @@
                 <tbody class="showProducts_info">
                     @foreach ($produtos as $produto)
                     <tr>
-                        <td>{{$produto->id_produto}}<td>
+                        <td>{{$produto->id_produto}}</td>
 
                         <td>
                             @if ($produto->imagem)

@@ -8,16 +8,8 @@
     <div class="home_block">
         <p class="title_home_block">PRODUTOS EM DESTAQUE:</p>
         <div class="main_items_home_block">
-            <span>{{$user->id}}</span>
-            <span>{{$user->name}}</span>
-            <span>{{$user->telefone}}</span>
-            <span>{{$user->email}}</span>
-            <span>{{$user->cpf}}</span>
 
-
-
-
-            <table class="table" style="margin-top:1em; background-color: #fafafa;" >
+            <table class="table" style="margin-top:1em; background-color: #fafafa;">
                 <thead style="background-color: rgb(121, 157, 228);
     border-radius: 20px;height: 35px;">
                     <tr>
@@ -30,17 +22,17 @@
                         <th scope='col'>Altura</th>
                         <th scope='col'>Largura</th>
                         <th scope='col'>Comprimento</th>
-                        
+
 
                     </tr>
                 </thead>
                 <tbody class="showProducts_info">
                     @foreach ($produtos as $produto)
                     <tr>
-                        <td>{{$produto->id_produto}}<td>
+                        <td>{{$produto->id_produto}}
                         <td>
                             @if ($produto->imagem)
-                            <img src="{{ asset('storage/'.$produto->imagem) }}" style="width: 100px; height: 100px; object-fit: cover;">
+                            <img src="{{ asset('storage/'.$produto->imagem) }}" style="width: 100px; height: 100px; object-fit: cover; ">
 
                             @endif
                         </td>
